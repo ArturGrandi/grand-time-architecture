@@ -10,3 +10,19 @@ This publication is intended to establish:
 - chronological origin of the Grand Time model.
 
 No executable code is included at this stage.
+## For Researchers and Senior Developers
+
+This repository intentionally contains no executable code.
+
+Grand Time is published as prior art and an architectural framework.
+We are interested in collaboration with senior engineers, researchers,
+and system architects who enjoy working on:
+
+- macroeconomic system design,
+- non-financial value models,
+- protocol-level constraints and invariants,
+- long-horizon economic systems.
+
+If you are interested in exploring implementation approaches,
+formal verification, or alternative representations of this architecture,
+you are welcome to open an issue or start a discussion.
