@@ -3,6 +3,12 @@
 This repository contains the original conceptual architecture of **Grand Time** —
 a macroeconomic time-based valuation system designed as an alternative framework
 for measuring human economic contribution beyond fiat currency models.
+## Start Here
+
+- ARCHITECTURE_1_0.md — canonical system architecture
+- FORMULAS.md — formal economic and temporal model
+- DAO_GRAND_TIME_FUND.md — non-commercial execution structure
+- COLLABORATION_AND_IMPLEMENTATION.md — open research and implementation questions
 
 This publication is intended to establish:
 - authorship,
