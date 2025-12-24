@@ -1,13 +1,10 @@
-# Grand Time — Implementation Roadmap
+# Implementation Roadmap (Research & Demonstration)
 
 ## Status
-Architecture-aligned, research-only roadmap.
 
-This document defines a structured, non-commercial pathway for exploring,
-validating, and demonstrating the Grand Time architecture through
-formal models and limited reference implementations.
-
-No production deployment is implied.
+Architecture-aligned, research-only exploration roadmap.  
+This document outlines non-production implementation pathways to demonstrate coherence and interpretability of the Grand Time system.  
+It **does not imply** production deployment, commercial intent, or investment activity.
 
 ---
 
@@ -15,127 +12,144 @@ No production deployment is implied.
 
 This roadmap is intended for:
 
-- senior system architects,
-- protocol designers,
-- research engineers,
-- formal methods specialists.
+- senior protocol and system architects,
+- research engineers and modelers,
+- formal methods specialists,
+- simulation and verification practitioners.
 
-It targets contributors interested in long-horizon economic systems,
-non-financial value models, and protocol-level invariants.
+It is NOT intended to define product plans, market strategies, or financial instruments.
 
 ---
 
 ## Purpose
 
-The purpose of this roadmap is to:
+The purpose of this document is to provide a **structured, bounded approach** to exploring, demonstrating, and reasoning about the Grand Time architecture.
 
-- preserve architectural meaning during implementation exploration,
-- prevent accidental drift toward financial or speculative systems,
-- enable proof-of-concept demonstrations without production risk,
-- support formal verification and academic review.
+Key intents:
 
-This roadmap does **not** define a product plan or commercialization path.
-
----
-
-## Implementation Principles
-
-All implementation efforts must adhere to the following principles:
-
-- Architecture defines meaning; code does not.
-- Interfaces are optional representations, not definitions.
-- Demonstrations must not create real economic dependency.
-- No participant assumes financial obligation or expectation.
+- validate architectural assumptions through formal methods,
+- explore interface-level representations for reasoning,
+- demonstrate conceptual behavior without live execution,
+- support rigorous review without implying production status.
 
 ---
 
-## Layer 1 — Architectural Integrity
+## Core Principles
 
-Objective:
-Ensure that all implementation exploration strictly follows
-ARCHITECTURE_1_0.md.
+All exploration activities should preserve the following architectural constraints:
 
-Actions:
-- Map each architectural invariant to implementation constraints.
-- Explicitly document which architectural rules are enforced at each layer.
-- Reject implementations that introduce convertibility, yield, or speculation.
+- the canonical architecture (ARCHITECTURE_1_0.md) defines meaning and scope,
+- implementation artifacts must not define economic meaning,
+- interfaces should remain optional, replaceable, and non-authoritative,
+- demonstration environments must avoid real-world impact or dependency.
 
 ---
 
-## Layer 2 — Formal Specification and Verification
+## Implementation Layers
 
-Objective:
-Provide formal representations of Grand Time invariants and logic.
+### Layer 1 — Architectural Integrity
 
-Actions:
-- Express core rules using formal specification methods
-  (e.g., mathematical notation, TLA+, Alloy, or equivalent).
-- Verify invariants such as:
-  - non-convertibility to fiat,
-  - absence of reflexive price mechanics,
-  - separation between time capital and monetary systems.
-- Ensure all specifications remain non-executable by default.
+**Objective:**  
+Establish a shared canonical reference for all implementation exploration.
 
-Formal models are preferred over executable code at this stage.
+**Actions:**
 
----
+- Map architectural invariants to candidate implementation constraints.
+- Explicitly document how each invariant is represented in subsequent layers.
+- Ensure no drift toward financial semantics, markets, or convertibility.
 
-## Layer 3 — Interface-Level Reference Implementations (Optional)
+**Artifacts:**
 
-Objective:
-Explore how architectural rules could be expressed through technical interfaces
-without redefining their economic meaning.
-
-Actions:
-- Create minimal interface definitions (e.g., ERC-20–like interfaces if used).
-- Ensure interfaces remain replaceable and non-authoritative.
-- Prevent interfaces from implying token economics, markets, or liquidity.
-
-These implementations are strictly for reasoning and testing purposes.
-
-They **must not** be interpreted as production-ready components.
+- ARCHITECTURE_1_0.md
+- formal mapping notes
 
 ---
 
-## Layer 4 — Demonstration Environment
+### Layer 2 — Formal Specification & Verification
 
-Objective:
-Demonstrate operational coherence without real-world deployment.
+**Objective:**  
+Provide formal representations of core Grand Time invariants and logic.
 
-Actions:
-- Build simulation or sandbox environments.
-- Use synthetic or non-production data only.
-- Avoid real asset integration or live user dependency.
-- Demonstrate system behavior under stress, pause conditions, and constraints.
+**Actions:**
 
-Demonstrations serve explanatory and validation purposes only.
+- Encode invariants in a formal specification language (e.g., TLA+, Alloy, Coq, or equivalent).
+- Validate that invariants hold under defined scenarios.
+- Analyze edge cases such as oracle failures, partial data, and time discontinuities.
 
----
-
-## Layer 5 — Evaluation and Review
-
-Objective:
-Assess architectural consistency and research value.
-
-Actions:
-- Review alignment between architecture, formulas, and implementations.
-- Identify risks of misinterpretation or misuse.
-- Document open questions and unresolved trade-offs.
-
-Evaluation outcomes may inform future architectural revisions.
+**Outcome:**  
+A body of formal artifacts that do not execute in production but support rigorous reasoning.
 
 ---
 
-## Safety and Scope Guards
+### Layer 3 — Interface-Level Reference Implementations (Optional)
 
-The following constraints apply globally:
+**Objective:**  
+Create minimal technical representations of architectural rules.
 
-- No fundraising or capital solicitation.
-- No investment instruments or token offerings by intent.
-- No yield, dividends, or speculative incentives.
-- No production deployment or operational promises.
+**Guidelines:**
 
-Any work violating these constraints is out of scope.
+- Implement interfaces (e.g., Solidity interface shells) that reflect architecture without defining economic behavior.
+- Ensure interface artifacts are clearly labeled as **reference-only** and not suitable for production.
+
+**Constraints:**
+
+- No product assumptions
+- No market mechanisms
+- No tokenomics
+
+**Outcome:**  
+Technical reference artifacts for testing and reasoning.
+
+---
+
+### Layer 4 — Demonstration Environment
+
+**Objective:**  
+Allow conceptual behaviors to be observed and reasoned about in isolation.
+
+**Characteristics:**
+
+- Synthetic or sandbox data
+- Explicit separation from any live ecosystem
+- Read-only or restricted simulations
+
+**Possible forms:**
+
+- simulation dashboards
+- constrained UI for scenario walkthroughs
+- visualizations of formal motor
+
+**Outcome:**  
+Demonstrations enhancing understanding of architecture without operational risk.
+
+---
+
+### Layer 5 — Evaluation & Review
+
+**Objective:**  
+Assess alignment between architecture, formal models, and reference artifacts.
+
+**Actions:**
+
+- Collect expert feedback
+- Document unresolved questions and trade-offs
+- Recommend enhancements to architecture or formal models
+
+**Outcome:**  
+Iterative refinement of architectural definitions, not a commercialization path.
+
+---
+
+## Safety & Scope Guards
+
+The following constraints apply universally:
+
+- No fundraising, capital solicitation, or economic obligations.
+- No production deployment, on-chain mainnet releases, or live user dependency.
+- No financial instruments, tokenomics, or monetization schemes.
+- No guarantees of outcomes, value, or economic behavior.
+
+Work that violates these constraints is **out of scope**.
 
 ---
 
@@ -143,27 +157,30 @@ Any work violating these constraints is out of scope.
 
 This roadmap must be read together with:
 
-- ARCHITECTURE_1_0.md — canonical system meaning and boundaries
-- FORMULAS.md — formal economic and temporal models
-- DAO_GRAND_TIME_FUND.md — execution and coordination structure
-- COLLABORATION_AND_IMPLEMENTATION.md — entry points for contributors
+- **ARCHITECTURE_1_0.md** — canonical system meaning and boundaries  
+- **FORMULAS.md** — formal economic and temporal models  
+- **DAO_GRAND_TIME_FUND.md** — execution and coordination structure  
+- **COLLABORATION_AND_IMPLEMENTATION.md** — contributor entry points and research framing
+
+This document is **subordinate** to the above and does not override them.
 
 ---
 
 ## Explicit Non-Goals
 
-This roadmap does not aim to:
+This document does NOT aim to:
 
-- launch a market-facing product,
-- define tokenomics or monetization,
-- replace existing financial systems,
-- serve as an investment or commercial proposal.
+- launch a product
+- define or imply tokenomics
+- replace existing systems
+- serve as an investment or commercial proposal
+- imply deployment on production networks
 
 ---
 
 ## Summary
 
-This roadmap exists to make Grand Time implementable **without making it tradable**.
+Implementation is treated as **a tool for understanding**,  
+not a path to monetization, market participation, or operational commitments.
 
-It preserves intellectual integrity while allowing
-careful, bounded exploration by qualified contributors.
+Any extension beyond this roadmap requires a **separate architectural decision** and explicit documentation.
