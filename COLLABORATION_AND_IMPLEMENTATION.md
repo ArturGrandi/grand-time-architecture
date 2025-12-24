@@ -7,6 +7,10 @@ This document defines the principles of collaboration with engineers,
 researchers, and system architects participating in the implementation
 of the **Grand Time** architecture.
 
+For clarity: the term "implementation" in this document refers exclusively to
+research, simulation, formal modeling, and reference-level experimentation.
+It does not imply production deployment, operational systems, or commercial use.
+
 This document is NOT:
 - an investment offer,
 - an employment offer,
