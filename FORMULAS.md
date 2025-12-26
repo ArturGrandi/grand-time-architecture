@@ -1,192 +1,137 @@
-FORMULAS
-Universal Time-Based Economic Architecture (Conceptual Layer)
-1. What Is Grand Time
+# Grand Time — Formal Model (GT 1.0)
 
-Grand Time is an economic concept in which human time is treated as a universal non-monetary unit of value, existing in parallel with monetary and financial systems, rather than replacing them.
+## Status
+Active (Specification Reference)
 
-Unlike traditional models where value is expressed through:
+## Scope
+This document defines the formal mathematical and logical model
+of the Grand Time system.
 
-money,
+It specifies invariants, parameters, and valuation rules.
+No production deployment is implied.
 
-capital,
+---
 
-assets,
+## Core Quantities
 
-debt and interest instruments,
+### Population Baseline (N0)
+N0 denotes the official global human population
+at the moment of system launch.
 
-Grand Time is based on the premise that irreversible biological human time is the primary economic category, while all other forms of value are derivative.
+N0 is a runtime deployment parameter and MUST NOT be hardcoded.
 
-2. Sources of the Systemic Crisis in the Modern Economy
+Population verification after launch does not violate N0.
+Verified humans exceeding N0 are treated as newly verified population
+and accrue value with coefficient **1 : 1.5** from the moment of verification.
 
-The modern economy faces three fundamental disconnects:
+---
 
-The productivity–income gap
-Productivity growth driven by AI and automation no longer translates into proportional income growth for people.
+## Time Capital (TC)
+Time Capital represents accumulated human time value
+that is not released into valuation circulation.
 
-The disconnect between financial metrics and human participation
-Financial indicators no longer adequately reflect real human contribution.
+TC is used as a stabilization buffer
+and as a sink during valuation pauses.
 
-The biological–machine subject gap
-Economic systems lack stable criteria to distinguish:
+---
 
-a biological human,
+## Daily Mint
 
-an autonomous machine system.
+### Total Daily Mint
+Total daily mint is fixed:
 
-All three disconnects share a common root cause:
-the absence of a universal measure of human time in the economy.
+M = 10,000,000 GUCT / day
 
-3. Positioning of Grand Time Among Existing Models
+This value is invariant under GT 1.0.
 
-There are initiatives that incorporate time into economic systems:
+---
 
-Time Banking,
+### DAO Fund Allocation
+Daily allocation to DAO Grand Time Fund is fixed:
 
-local social exchange systems,
+M_DAO = 111,111 GUC / day
 
-digital time tokenization,
 
-Human Capital and Natural Capital concepts.
+This allocation is operational
+and does not imply investment or profit mechanics.
 
-However, all of them are:
+---
 
-local,
+### Valuation Allocation
+Remaining daily mint is allocated according to
+human time valuation logic and mint gate conditions:
 
-auxiliary,
+M_VAL = M − M_DAO
 
-derived from monetary metrics.
 
-Grand Time represents a system-level macroeconomic approach, forming a universal non-monetary unit of value applicable to:
+Valuation minting is subject to coverage, stability,
+and oracle safety constraints.
 
-states,
+---
 
-sovereign and institutional funds,
+## Mint Coverage Gate
 
-the global AI-driven economy.
+Valuation issuance is allowed only if coverage condition holds:
 
-Grand Time is:
+F_stab ≥ P × M_VAL
 
-not a social service,
+Where:
+- F_stab — Stability Fund (eligible assets, USD-equivalent)
+- P — protocol reference price
+- M_VAL — valuation mint amount
 
-not a crypto project,
+---
 
-not a redistribution program,
+### Gate Behavior
+If coverage condition is violated:
+- valuation issuance is paused,
+- M_VAL is redirected to Time Capital,
+- protocol reference price remains unchanged.
 
-but a new class of economic architecture.
+No reflexive price decrease is allowed.
 
-4. Grand Time and the AI Economy
+---
 
-Grand Time views AI and automation as an inevitable and positive stage of civilizational development.
+## Stability Constraint
+GT 1.0 enforces a **333-day stability standard**.
 
-AI:
+The stability constraint limits valuation behavior
+but does not imply fixed price guarantees.
 
-increases productivity,
+---
 
-reduces dependence on physical labor,
+## Bonding Premium Constraint
+Bonding premium is capped:
 
-frees humans from routine functions.
+Premium ≤ 44%
 
-This creates a core challenge for future economies:
+This cap applies globally and invariantly.
 
-How to distinguish a biological human from an autonomous machine at the economic level.
+---
 
-5. The Role of AI in the Grand Time System
+## Oracle Role
+Oracles provide reference valuation inputs only.
 
-Within Grand Time, AI performs not only a productive but also an identification and protective function.
+They do not:
+- define economic meaning,
+- trigger liquidation,
+- enforce reflexive mint behavior.
 
-AI is used to:
+Oracle failure triggers valuation pause,
+not price or supply reconfiguration.
 
-distinguish biological humans from machine agents,
+---
 
-prevent machine substitution of human participation,
+## Invariants Summary
+- No forced fiat convertibility
+- No profit guarantees
+- No liquidation cascades
+- No reflexive price mechanics
+- Architecture defines meaning, not interfaces
 
-preserve human time as the foundational economic value.
+---
 
-This establishes a new category of AI tasks:
-the protection of human identity as an economic category.
-
-6. The Time-Based Economic Model (Conceptual)
-
-Within Grand Time:
-
-human time is treated as a measurable but non-monetary quantity;
-
-time is not an object of credit, interest, or speculation;
-
-the economic valuation of time is separated from financial markets.
-
-The system allows for valuation of time, but not its transformation into a financial instrument.
-
-7. Phased Implementation and Scientific Verification
-
-The publication of this architecture represents the first stage of implementing the Grand Time scientific concept.
-
-The objectives of this stage are:
-
-to demonstrate the workability of the model,
-
-to observe behavioral responses and adaptation among different segments of society,
-
-to analyze perception within a shared informational environment.
-
-At this stage, particular attention is given to:
-
-financial and institutional entities,
-
-professional communities,
-
-society as a whole.
-
-This stage is research- and verification-oriented and does not involve the deployment of financial or technical mechanisms.
-
-8. Architectural Layers
-
-Grand Time explicitly separates:
-
-Conceptual layer
-The economic model of time and human participation.
-
-Technical layer
-Protocols, algorithms, and digital implementation (not disclosed here).
-
-Regulatory layer
-Legal and institutional frameworks.
-
-This repository records only the conceptual layer.
-
-9. Strategic Purpose
-
-Grand Time can be applied:
-
-as a parallel layer to financial systems,
-
-as a metric for the AI economy,
-
-as a foundation for new social contracts,
-
-as a tool for long-term resilience of states and funds.
-
-10. Purpose of Publication
-
-This document is published for the purposes of:
-
-authorship fixation,
-
-priority fixation,
-
-scientific and strategic discussion.
-
-It does not constitute:
-
-an investment offer,
-
-a technical specification,
-
-a promise of returns.
-
-11. Authorship
-
-Artur Grandi
-independent researcher and author of the Grand Time concept,
-dedicated to building a universal non-monetary architecture of value
-based on human time.
+## Relationship to Other Documents
+- ARCHITECTURE_1_0.md — canonical system meaning
+- SECURITY_MODEL.md — failure and attack handling
+- DAO_GRAND_TIME_FUND.md — execution coordination
