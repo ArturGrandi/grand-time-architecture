@@ -54,3 +54,19 @@ and does not define economic meaning.
 - FORMULAS.md — formal mathematical representation
 - DAO_GRAND_TIME_FUND.md — execution and coordination layer
 - COLLABORATION_AND_IMPLEMENTATION.md — research and engineering entry point
+- ---
+
+## Specification Hierarchy
+
+This document is the canonical source of meaning
+for the Grand Time system.
+
+All other documents derive authority from this architecture
+and must not redefine economic meaning or system invariants.
+
+- Formal rules are specified in FORMULAS.md
+- Security and failure handling are specified in SECURITY_MODEL.md
+- Execution coordination is defined in DAO_GRAND_TIME_FUND.md
+- Contract roles are mapped in CONTRACT_MAP_V1.md
+
+In case of conflict, ARCHITECTURE_1_0.md takes precedence.
