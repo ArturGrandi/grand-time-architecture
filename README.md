@@ -1,5 +1,11 @@
 # Grand Time Architecture
 
+> ⚠️ **Frozen Specification**
+>
+> This repository contains a finalized architectural and formal specification.
+> Core economic meaning and invariants are fixed.
+> The repository is intended for research, verification, and implementation accuracy only.
+
 This repository contains the original conceptual architecture of **Grand Time** —
 a macroeconomic time-based valuation system designed as an alternative framework
 for measuring human economic contribution beyond fiat currency models.
