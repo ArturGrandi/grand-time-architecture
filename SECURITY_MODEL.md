@@ -1,6 +1,11 @@
 # Security Model (Research-Only)
 
 ## Status
+This security model operates strictly within the boundaries
+defined by ARCHITECTURE_1_0.md and FORMULAS.md.
+
+Security mechanisms must preserve economic invariants
+and must never redefine valuation logic or system meaning.
 Active — Architecture & Specification Phase (research-only, non-production)
 
 ## Purpose
