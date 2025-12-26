@@ -168,3 +168,15 @@ contribute production-grade code,
 you are welcome.
 
 If you are here to redesign the system — this is not the right repository.
+
+---
+
+## Economic Redesign Policy
+
+This repository does not accept proposals
+that redefine economic meaning, valuation logic,
+or system purpose.
+
+Discussion of alternative economic models,
+tokenomics, or speculative extensions
+belongs outside this repository.
