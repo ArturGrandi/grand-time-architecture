@@ -135,3 +135,16 @@ not price or supply reconfiguration.
 - ARCHITECTURE_1_0.md — canonical system meaning
 - SECURITY_MODEL.md — failure and attack handling
 - DAO_GRAND_TIME_FUND.md — execution coordination
+---
+
+## Authority and Scope
+
+This document specifies formal parameters and invariants only.
+
+It does not define:
+- economic meaning,
+- governance intent,
+- commercial or investment properties.
+
+All semantic interpretation is defined
+exclusively in ARCHITECTURE_1_0.md.
