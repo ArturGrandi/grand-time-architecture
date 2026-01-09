@@ -1,3 +1,15 @@
+## Canonical Research Reference
+
+This repository supports the published research paper:
+
+**Time as a Non-Monetary Economic Primitive**  
+DOI: https://doi.org/10.5281/zenodo.18190386
+
+Status: research-only, spec-first economic protocol.  
+No production deployment. No investment offering.
+
+---
+
 # Grand Time Architecture
 
 > ⚠️ **Frozen Specification**
