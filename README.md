@@ -10,6 +10,21 @@ No production deployment. No investment offering.
 
 ---
 
+## Research Review (Single Entry Point)
+
+All technical review, critique, and research discussion for **Grand Time (GT 1.0)**
+is consolidated in a single GitHub Issue:
+
+➡️ **Open Research and Implementation Questions**  
+https://github.com/ArturGrandi/grand-time-architecture/issues/1
+
+Please **do not open additional issues**.
+
+This repository follows a **spec-first, research-driven review process**.
+All critical discussion happens in the Issue above.
+
+---
+
 # Grand Time Architecture
 
 > ⚠️ **Frozen Specification**
